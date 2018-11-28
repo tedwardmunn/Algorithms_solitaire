@@ -1,0 +1,53 @@
+next(){
+  getAvailableCards();
+  getNextCardsWanted();
+  if an available card is wanted and hasnt been placed first before{
+    push it to the list of cardsMoved;
+    place() the matching card;
+  }
+  else if an available card is wanted and has been placed first before{
+    //this only runs when there are no options for cards that have not been placed first before
+    push it to the list of cardsMoved;
+    place() the matching card;
+  }
+  else if(there are cards that have not gone first in a decision yet){
+    //resets the piles once all possible moves have been completed
+    branch();
+  }
+  else{
+    end;
+  }
+}
+
+place(Card card_to_place){
+  add to the list of brances to check;//this helps us know when we have checked all of the possible branches
+  incriment the counter
+  if(counter>countMax){
+    countMax = counter//keeps track of which branch has the most cards placed
+  }
+  find the pile that the card_to_place should go in and place it there();
+  next();//recursive call
+}
+
+branch(){
+  set counter = 0;
+
+  if(cardsMoved = 0){//if cards wanted is empty, there are no other branches
+    next();
+  }
+
+  else if(cardsMoved = 1){//if there is only one card in the stack
+    remove card from the RestPile that its on;
+    set card placed first value high;
+    return card to original SmallPile that it was on;
+  }
+  else if(cardsMoved >1){
+    remove card from the RestPile that its on;
+    if(the next card on the stack has card placed value high){
+      set this cards placed first value high;
+    }
+    return card to original SmallPile that it was on;
+    for the last card on the stack, set its placed first value high;
+  }
+  next();
+}

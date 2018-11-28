@@ -1,0 +1,12 @@
+//        Card tempCard;
+//        Stack<Card> tempStack = new Stack<Card>();
+//        System.out.println("The stacks contents are");
+//        while(pileIn.pop() != null){
+//            tempCard =  pileIn.pop();
+//            tempStack.push(tempCard);
+//            tempCard.printCard(tempCard);
+//        }
+//        while(tempStack.pop() != null){
+//            tempCard = tempStack.pop();
+//            pileIn.push(tempCard);
+//        }

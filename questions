@@ -1,0 +1,23 @@
+- What is a histogram
+ - a count of the number of occurrences, each time the algorithm is run
+ - a count of how many cards are moved automatically histogram should range to at least 15
+- What kind of writeup is the prof looking for? Should I discuss construction of the game?
+-
+
+--> wrietup, think of perspective of marker
+ - state assumptions and decisons, describe, justify, discuss options
+ - for the algorithm compare the different approaches
+
+ write:
+ - evaluate different algorithm options
+ - talk about each one and decide which is best
+ - impliment the best
+
+ 1. construction of testing environment
+  - small
+  - describe how it works
+ 2. algorithm options --> more important
+  - options
+  - which is the best, basically one correct answer, branch and bound
+  - implement
+  - describe and evaluate outputs
